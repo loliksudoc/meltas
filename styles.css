@@ -1,0 +1,164 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Фон и базовые настройки */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Заголовок и баннер */
+header {
+    background: url('banner.jpg') no-repeat center center/cover;
+    height: 250px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-top: 50px;
+}
+
+/* Блоки и контент */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Стили для блоков с кнопками */
+.buttons-block {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #e65c00;
+}
+
+/* Стили для второго блока */
+.second-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.second-block img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.second-block .text {
+    width: 55%;
+    font-size: 20px;
+}
+
+/* Стили для третьего блока */
+.third-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.third-block img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.third-block .links {
+    width: 55%;
+}
+
+.third-block .links a {
+    display: block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.third-block .links a:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для четвертого блока */
+.fourth-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.fourth-block img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.fourth-block .rules {
+    width: 55%;
+    font-size: 18px;
+}
+
+.fourth-block .rules p {
+    margin-bottom: 15px;
+}
+
+/* Стили для пятого блока */
+.fifth-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.fifth-block img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.fifth-block .messages {
+    width: 55%;
+    font-size: 18px;
+}
+
+/* Стиль для фона футера */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
