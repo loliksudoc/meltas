@@ -1,164 +1,166 @@
-/* Общие стили */
-* {
+
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
     box-sizing: border-box;
 }
 
-/* Фон и базовые настройки */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-}
 
-h1, h2, h3 {
-    color: #333;
-}
-
-/* Заголовок и баннер */
-header {
-    background: url('banner.jpg') no-repeat center center/cover;
-    height: 250px;
+header .banner {
+    position: relative;
     text-align: center;
     color: white;
 }
 
-header h1 {
-    font-size: 48px;
-    margin-top: 50px;
+header .banner img {
+    width: 100%;
+    height: auto;
 }
 
-/* Блоки и контент */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px 0;
+header .banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: bold;
 }
 
-/* Стили для блоков с кнопками */
-.buttons-block {
+
+.nav-block {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #333;
 }
 
-.button {
+.nav-block button {
+    padding: 12px 30px;
+    font-size: 1.5rem;
     background-color: #ff6600;
     color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.button:hover {
+.nav-block button:hover {
     background-color: #e65c00;
 }
 
-/* Стили для второго блока */
-.second-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
 
-.second-block img {
-    width: 40%;
-    border-radius: 8px;
-}
-
-.second-block .text {
-    width: 55%;
-    font-size: 20px;
-}
-
-/* Стили для третьего блока */
-.third-block {
+section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    flex-wrap: wrap; 
 }
 
-.third-block img {
-    width: 40%;
-    border-radius: 8px;
+
+section .text {
+    width: 50%;
+    padding: 10px;
 }
 
-.third-block .links {
-    width: 55%;
+section .image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease; 
 }
 
-.third-block .links a {
-    display: block;
-    background-color: #007BFF;
+
+section .image img:hover {
+    transform: scale(1.1);
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.buttons a {
+    padding: 15px;
+    background-color: #ff6600;
     color: white;
-    padding: 10px 20px;
-    margin-bottom: 15px;
     text-decoration: none;
     border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
     transition: background-color 0.3s;
 }
 
-.third-block .links a:hover {
-    background-color: #0056b3;
+.buttons a:hover {
+    background-color: #e65c00;
 }
 
-/* Стили для четвертого блока */
-.fourth-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
 
-.fourth-block img {
-    width: 40%;
-    border-radius: 8px;
-}
-
-.fourth-block .rules {
-    width: 55%;
-    font-size: 18px;
-}
-
-.fourth-block .rules p {
-    margin-bottom: 15px;
-}
-
-/* Стили для пятого блока */
-.fifth-block {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.fifth-block img {
-    width: 40%;
-    border-radius: 8px;
-}
-
-.fifth-block .messages {
-    width: 55%;
-    font-size: 18px;
-}
-
-/* Стиль для фона футера */
 footer {
     background-color: #333;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 10px;
 }
 
-footer a {
-    color: #ff6600;
-    text-decoration: none;
+
+@media (max-width: 768px) {
+
+    .nav-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-block button {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section .text {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    section .image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .buttons a {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
 }
 
-footer a:hover {
-    text-decoration: underline;
+@media (max-width: 1024px) {
+    .nav-block button {
+        font-size: 1.3rem;
+    }
+
+    section .text {
+        width: 60%;
+    }
+
+    section .image {
+        width: 40%;
+    }
 }
